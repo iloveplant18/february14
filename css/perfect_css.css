@@ -1,0 +1,259 @@
+﻿* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Raleway, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #9D8189;
+}
+
+/*Заголовок*/
+.head {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	border-bottom: 3px solid #ff3f6e;
+	background-color: #FFE5D9;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 130%;
+	color: #9D8189;
+}
+
+h2 {
+	color: black;
+}
+
+.megatitle {
+	font-size: 70px;
+}
+
+.mega {
+	font-size: 70px;
+	color: black;
+}
+
+strong {
+	color: black;
+	border-bottom: 3px solid black;
+}
+
+.head__subtitle {
+	color: #ff3f6e;
+	margin-top: 15px;
+}
+
+/*флекс хуйня с несколькими блоками*/
+section {
+	padding: 16px;
+	border-bottom: 3px solid #ff3f6e;
+}
+
+.inf {
+	text-align: center;
+	background-color: #D8E2DC;
+}
+
+.inf h2 {
+	margin-bottom: 15px;
+}
+
+.blocks {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	list-style: none;
+}
+
+.blocks li {
+	width: calc(100%/3 - 40px); /*изменить в медиа*/
+	text-align: justify;
+}
+
+.blocks__img {
+	width: 100%;
+	border: 5px dashed #F4ACB7;
+	border-radius: 16px;
+}
+
+/*блок с фактами*/
+.facts {
+	background-color: #e8d3fe;
+}
+
+.facts article {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.facts article:not(:last-child) {
+	border-bottom: 3px dashed #ff3f6e;
+}
+
+/*таймер*/
+.timer {
+	display:flex;
+	justify-content: center;
+	column-gap: 40px;
+	color: black;
+}
+
+.time {
+	font-size: 100px;
+}
+
+.time:not(:last-child)::after {
+	content: ':';
+	margin-left: 40px;
+}
+
+.grafic {
+	background-color: #FFE5D9;
+}
+
+.stat {
+	list-style: none;
+}
+
+.stat li {
+	margin-top: 20px;
+}
+
+.stat__1 {
+	width: 100%;
+	background-color: #74ffe6;
+}
+
+.stat__1:hover {
+	background-color: #00f2fb;
+}
+
+.stat__2 {
+	width: 36%;
+	background-color: #ffc639;
+}
+
+.stat__2:hover {
+	background-color: #f9bb24;
+}
+
+.stat__3 {
+	width: 20%;
+	background-color: #95fc62;
+}
+
+.stat__3:hover {
+	background-color: #6bff22;
+}
+
+.percent {
+	width: 100%;
+	border: 2px solid #9D8189;
+	background-color: #fff;
+}
+
+.fact {
+	display: flex;
+	align-items: center;
+	column-gap: 40px;
+}
+
+.fact__img {
+	width: 25%;
+	height: fit-content;
+}
+
+.fact__text {
+	text-align: justify; 
+}
+
+.colors {
+	animation-name: text-colors;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes text-colors{
+	from {
+		color: red;
+	}
+	25% {
+		color: #6bff22;
+	}
+	50% {
+		color: #f9bb24;
+	}
+	75% {
+		color: #00f2fb;
+	}
+	to {
+		color: red;
+	}
+}
+/*оформление таймлайна*/
+.frame {
+	display: flex;
+	align-items: center;
+	padding: 30px;
+	border-left: 3px solid #ff3f6e;
+}
+
+	.frame::before {
+		content: "";
+		position: absolute;
+		left: 7px;
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: #ff3f6e;
+		color: #ff3f6e;
+	}
+
+.frame img {
+	margin-right: 20px;
+	width: 25%;
+}
+
+.frame__desc {
+	text-align: justify;
+}
+
+@media (max-width: 1024px) {
+	.blocks li {
+		width: calc(100% / 2 - 80px);
+	}
+
+	.mega {
+		font-size: 40px;
+	}
+
+	/*тут все для таймера меняем*/
+	.time {
+		font-size: 60px;
+	}
+
+		.time:not(:last-child)::after {
+			margin-left: 10px;
+		}
+
+	.timer {
+		column-gap: 10px;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.blocks li {
+		width: calc(100% - 80px);
+	}
+
+	.mega {
+		font-size: 30px;
+	}
+}
